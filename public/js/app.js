@@ -1,3 +1,8 @@
+$(function(){
+
+    $('#canvas').sketch();
+
+});
 (function() {
     var requestAnimationFrame = window.requestAnimationFrame ||
         window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame ||
