@@ -11,6 +11,8 @@
     <script src="/bower_components/jquery-awesome-cursor/dist/jquery.awesome-cursor.js"></script>
     <script src="/bower_components/jcanvas/jcanvas.min.js"></script>
     <script src="/bower_components/jcanvas/sketch.js"></script>
+    <script src="/js/drawCircle.js"></script>
+    <script src="/js/drawRect.js"></script>
     <script src="/js/app.js"></script>
 </head>
 <body>
@@ -21,9 +23,9 @@
                 <i class="fa fa-paint-brush"></i>
                 <h3>Magic Pencil</h3>
             </a>
-            <!--<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>-->
-            <!--<div class="menu-list">-->
-                <!--<ul id="menu-content" class="menu-content collapse out">-->
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            <div class="menu-list">
+                <ul id="menu-content" class="menu-content collapse out">
                     <!--<li data-toggle="collapse" data-target="#toolsColor" class="collapsed active">-->
                         <!--<a href="#"><i class="fa fa-gift fa-lg"></i> Change color <span class="arrow"></span></a>-->
                     <!--</li>-->
@@ -45,16 +47,23 @@
                             <!--<a href="#canvas" data-download="png">Download Image</a>-->
                         <!--</li>-->
                     <!--</ul>-->
-                <!--</ul>-->
-            <!--</div>-->
+
+                    <li id="autoDrawCircle" class="collapsed active">
+                        Auto draw circle <span class="arrow"></span>
+                    </li>
+                    <li id="autoDrawRectangle" class="collapsed active">
+                        Auto draw rectangle <span class="arrow"></span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="col-md-9">
-            <div class="input-group">
-                <input id="autoText" type="text" class="form-control" maxlength="5" placeholder="Please enter word (max length 5 symbols)">
-                  <span class="input-group-btn">
-                    <input class="btn btn-success" type="button" id="submitAutoPencil" value="Auto draw text"/>
-                  </span>
-            </div>
+            <!--<div class="input-group">-->
+                <!--<input id="autoText" type="text" class="form-control" maxlength="5" placeholder="Please enter word (max length 5 symbols)">-->
+                  <!--<span class="input-group-btn">-->
+                    <!--<input class="btn btn-success" type="button" id="submitAutoPencil" value="Auto draw text"/>-->
+                  <!--</span>-->
+            <!--</div>-->
             <canvas id="canvas" width="900px" height="500px"></canvas>
         </div>
     </div>

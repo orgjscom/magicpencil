@@ -1,16 +1,25 @@
-var Pencil = {
-    active: true, //isClicked
-    type: "auto",
-    stooke: 1, //radius
-    color: "black",
-    mouseX: 0, //coords
-    mouseY: 0, //coords
-    draw: function(){
+(function() {
+    var requestAnimationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+}());
 
-    },
-    drawText: function(){
 
-    }
-}
-
+$(function(){
+    var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d');
+    $(document).delegate("#autoDrawCircle", "click", function(){
+        drawCircle(canvas,context,100, 100)
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.restore();
+        context.closePath();
+    })
+    $(document).delegate("#autoDrawRectangle", "click", function(){
+        drawRect(canvas,context)
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.restore();
+        context.closePath();
+    })
+});
 
