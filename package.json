@@ -1,0 +1,25 @@
+{
+  "name": "magicpencil",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "hogan-express": "*",
+    "bower": "~0.9.2"
+  },
+  "description": "magicpencil",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/san4osq/magicpencil.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/san4osq/magicpencil/issues"
+  },
+  "homepage": "https://github.com/san4osq/magicpencil"
+}

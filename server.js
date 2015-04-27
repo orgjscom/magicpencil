@@ -1,0 +1,28 @@
+var express  = require('express');
+var http = require('http');
+var path = require('path');
+var routes = require('./server/routes');
+//var sass = require('node-sass');
+//var connect = require('connect')
+//var sassMiddleware = require('node-sass-middleware')
+var app = express();
+
+app.engine('html', require('hogan-express'));
+app.set('view options', {layout: true});
+app.set('layout', 'layout');
+app.enable('view cache');
+app.set('port', process.env.PORT || 3000);
+app.set('view engine', 'html');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
+
+routes.initialize(app);
+
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+});

@@ -1,0 +1,27 @@
+{
+  "name": "magicpencil",
+  "version": "0.0.0",
+  "homepage": "https://github.com/san4osq/magicpencil",
+  "authors": [
+    "san4osq <san4osq@ya.ru>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "components-font-awesome": "*",
+    "fontawesome": "*",
+    "jquery-awesome-cursor": "*",
+    "jquery": "~2.1.3"
+  },
+  "description": "pencil",
+  "keywords": [
+    "pencil"
+  ]
+}
